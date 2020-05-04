@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login page</title>
+  <link rel="stylesheet" href="css/login.css">
+  <script language="javascript" type="text/javascript">
+  	function validate()
+  		{
+  			var name=document.getElementById("t1").value;
+  			var namev=/^[a-z A-Z]{1,}$/;
+  			var age=document.getElementById("t2").value;
+  			var em=document.getElementById("t3").value;
+  				var vage=/^[20-49]{1,}$/;
+  					var vem=/^[a-zA-Z_]{3,}@[a-zA-z]{3,}[.]{1}[a-zA-Z]{2,}$/;
+
+  			if(!namev.test(name))
+  				{
+  					alert("invalid name");
+  					return false;
+  				}
+  				if(!vage.test(age))
+  				{
+  				document.write("u");
+
+
+  				alert("invalid age or age minimum");
+  				return false;
+  				}
+  				if(!vem.test(em))
+  				{
+  					alert("invalid email");
+  					return false;
+  				}
+
+  		}
+  </script>
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+
+    <form class="login" action="index.html" method="post">
+      <input type="text" placeholder="username">
+      <input type="password" placeholder="password">
+      <button type="button" name="button" >LOGIN</button>
+      <p class="message">Not Registered?<a href="signup.html">Register</a></p>
+    </form>
+  </div>
+</div>
+
+  </body>
+</html>

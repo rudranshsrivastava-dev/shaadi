@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login page</title>
+  <link rel="stylesheet" href="css/login.css">
+  <script language="javascript" type="text/javascript">
+  	function validate()
+  		{
+  			var name=document.getElementById("t1").value;
+  			var namev=/^[a-z A-Z]{1,}$/;
+  			var age=document.getElementById("t2").value;
+  			var em=document.getElementById("t3").value;
+  				var vage=/^[20-49]{1,}$/;
+  					var vem=/^[a-zA-Z_]{3,}@[a-zA-z]{3,}[.]{1}[a-zA-Z]{2,}$/;
+
+  			if(!namev.test(name))
+  				{
+  					alert("invalid name");
+  					return false;
+  				}
+  				if(!vage.test(age))
+  				{
+  				document.write("u");
+
+
+  				alert("invalid age or age minimum");
+  				return false;
+  				}
+  				if(!vem.test(em))
+  				{
+  					alert("invalid email");
+  					return false;
+  				}
+
+  		}
+  </script>
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <form class="register-form" action="save.jsp" method="get" onSubmit="return validate()" align="center">
+        	<input type="text" placeholder="username" name="t1" id=t1>
+        	<input type="number" placeholder="mob. no" name="t2" id="t2">
+        	<input type="text" placeholder="email" name="t3" id="t3">
+        	<input type="password" placeholder="enter password" name="p1" id="p1">
+        	<input type="text" placeholder="Occupation" name="t4" id="t4">
+        	<p class="message">
+          <label for="fileupload">Profile Picture:</label>
+          </p>
+        	<input type="file" name="file" id="file">
+      <button type="button" name="button" >Create</button>
+      <p class="message">Already Registered?<a href="login.html">Login</a></p>
+    </form>
+    
+  </div>
+</div>
+
+  </body>
+</html>
